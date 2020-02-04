@@ -11,6 +11,7 @@ namespace StarWarsSample.iOS.Sources
 {
     public class NotesTableViewSource : MvxSimpleTableViewSource
     {
+        // Проперти после конструктора
         public IMvxCommand<Note> ItemRemoveCommand { get; set; }
 
         public NotesTableViewSource(UITableView tableView) : base(tableView, typeof(MyTableViewCell))
