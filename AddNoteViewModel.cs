@@ -9,7 +9,9 @@ namespace StarWarsSample.Core
 {
     public class AddNoteViewModel : MvxViewModel<Note,AddNoteViewModel.Result>
     {
-        readonly IMvxNavigationService navigationService;
+        readonly IMvxNavigationService navigationService; // нейминг филдов начинается с _
+        
+        // Проперти описываются после конструктора
         public IMvxCommand BackCommand => new MvxAsyncCommand(async ()=> await navigationService.Close(this,new Result() { IsRejected=true }));
         public IMvxCommand ConfirmCommand => new MvxAsyncCommand(ConfirmExecute);
         
